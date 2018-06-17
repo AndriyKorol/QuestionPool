@@ -1,3 +1,6 @@
+//змінна questions в якій буде зберігатися у вигляді масива обєктів запитання
+// питання складається з полів: запитання, масив відповідей, поле з правильною відповіддю
+// методи: щоб ігра запускалася, щоб получати відповіді, щоб задавати питання
 const questionPool = (function(){
     let questions = [
             {
@@ -33,7 +36,7 @@ const questionPool = (function(){
             }
         }
         function getPrompt(x, y) {
-            if(x === null || x === '' || x > 4) x = 'error';
+            x = (x === null || x === '' || x > 4) ? 'error' : x ;
             switch(x.toLowerCase()) {
                 case y:
                     counter++;
